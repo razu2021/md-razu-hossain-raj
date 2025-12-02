@@ -1,0 +1,83 @@
+/* ===============================
+   Reset / Normalize CSS
+   Purpose: Remove browser default styles
+   =============================== */
+
+/* Universal selector: margin, padding zero + box-sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body default styles */
+body {
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif; /* base font */
+  background-color: #ffffff; /* optional default bg */
+  color: #212529; /* default text color */
+}
+
+/* Headings, paragraphs, lists */
+h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Lists remove bullets and default margin */
+ul, ol {
+  list-style: none;
+}
+
+/* Anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images, videos, canvas, svg — make responsive */
+img, video, canvas, svg, picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Form elements */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Remove focus outline for clickable elements (optional) */
+button:focus, input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+/* Misc helpers */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: '';
+}
