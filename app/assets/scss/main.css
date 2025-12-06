@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/*=======  button backgourn color =====*/
 /* ===============================
    Reset / Normalize CSS
    Purpose: Remove browser default styles
@@ -90,125 +91,124 @@ q::before, q::after {
 }
 
 .index_banner {
-  width: 100%;
-  padding: clamp(4rem, 6vw, 10rem) 0;
-  background: linear-gradient(135deg, #0a0a0a, #121212);
-  color: #fff;
+  background: linear-gradient(135deg, #0b0f29, #1b1f3a);
   position: relative;
   overflow: hidden;
+  background-image: url("../../images/bg1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: clamp(4rem, 6vw, 7rem) 0, 0;
 }
 .index_banner::before {
   content: "";
   position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255, 80, 80, 0.4), transparent);
-  top: -80px;
-  left: -80px;
-  filter: blur(80px);
-  opacity: 0.8;
+  top: -15rem;
+  left: -15rem;
+  width: 38rem;
+  height: 38rem;
+  background: radial-gradient(circle, rgba(0, 195, 255, 0.25), transparent);
+  filter: blur(6rem);
+  z-index: 0;
 }
-
-.banner_wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: clamp(2rem, 4vw, 6rem);
-  flex-wrap: wrap;
+.index_banner::after {
+  content: "";
+  position: absolute;
+  bottom: -12rem;
+  right: -12rem;
+  width: 42rem;
+  height: 42rem;
+  background: radial-gradient(circle, rgba(255, 0, 120, 0.2), transparent);
+  filter: blur(7rem);
+  z-index: 0;
 }
-
-.banner_content {
-  width: 50%;
-  min-width: 300px;
-}
-.banner_content h4 {
-  font-size: clamp(1.6rem, 2.2vw, 2.4rem);
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-.banner_content h4 span {
-  color: #ff4d4d;
-}
-.banner_content h1 {
-  font-size: clamp(3rem, 4vw, 5rem);
-  line-height: 1.2;
-  margin-bottom: 1.6rem;
-}
-.banner_content h1 span {
-  color: #ffb84d;
-}
-.banner_content p {
-  font-size: clamp(1.4rem, 1.6vw, 1.8rem);
-  color: #cfcfcf;
-  line-height: 1.6;
-  margin-bottom: 2.4rem;
-}
-
-.primary_btn {
-  padding: clamp(1rem, 1.2vw, 1.4rem) clamp(2.4rem, 3vw, 3.6rem);
-  border-radius: 50px;
-  background: linear-gradient(45deg, #ff4d4d, #ffb84d);
-  border: none;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  transition: 0.3s ease;
-}
-.primary_btn a {
+.index_banner .banner_content {
   color: #fff;
-  font-size: clamp(1.4rem, 1.6vw, 1.8rem);
-  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s ease;
 }
-.primary_btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(255, 120, 80, 0.3);
+.index_banner .banner_content h4 {
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-weight: 400;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.5rem;
+  font-style: italic;
 }
-.primary_btn::after {
+.index_banner .banner_content h4 span {
+  color: #00e0ff;
+}
+.index_banner .banner_content h1 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+.index_banner .banner_content h1 span {
+  color: #00e0ff;
+  font-size: 6rem;
+}
+.index_banner .banner_content p {
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  max-width: 90%;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+}
+
+/* IMAGE + GRADIENT BORDER */
+.banner_image {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-end;
+  /* Overlay Big Text */
+}
+.banner_image .image {
+  width: clamp(22rem, 40vw, 35rem);
+  height: auto;
+  border-radius: clamp(0.5rem, 1.8vw, 1.5rem);
+  position: relative;
+  z-index: 1;
+}
+.banner_image h1 {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  z-index: 0;
+  font-size: clamp(3rem, 6vw, 7rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.07);
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  animation: textanimate 4s all;
+}
+
+/* Animated Border (REAL BORDER) */
+.banner_image .image::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(45deg, #ffb84d, #ff4d4d);
+  padding: 0.25rem;
+  border-radius: inherit;
+  background: linear-gradient(120deg, #ff007a, #00e0ff, #7a5cff, #ffcd00);
+  background-size: 300% 300%;
+  animation: borderAnim 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
   z-index: -1;
-  opacity: 0;
-  transition: 0.4s ease;
-}
-.primary_btn:hover::after {
-  opacity: 1;
 }
 
-.banner_image {
-  width: 40%;
-  min-width: 260px;
-  position: relative;
-}
-.banner_image img {
-  width: 100%;
-  border-radius: 20px;
-  z-index: 5;
-  position: relative;
-}
-.banner_image .img_glow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 180, 80, 0.3), transparent);
-  filter: blur(60px);
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .banner_content,
-  .banner_image {
-    width: 100%;
-    text-align: center;
+/* Animation */
+@keyframes borderAnim {
+  0% {
+    background-position: 0% 50%;
   }
-  .banner_image img {
-    max-width: 360px;
-    margin: 0 auto;
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 .header {
@@ -423,5 +423,68 @@ q::before, q::after {
   .marketplace ul {
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+.button1_nuxt a {
+  position: relative;
+  display: inline-block;
+  padding: clamp(1rem, 1.3vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.4rem, 1.7vw, 1.6rem);
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  overflow: hidden;
+  transition: all 0.35s ease;
+  letter-spacing: 0.04rem;
+  /* Neon animated border */
+  /* Shine effect */
+}
+.button1_nuxt a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+  background: linear-gradient(120deg, #ff0055, #007bff, #00f7ff, #ff7800, #ff0055);
+  background-size: 300% 300%;
+  animation: neonBorder 4s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.button1_nuxt a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-25deg);
+  transition: 0.4s;
+}
+.button1_nuxt a:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+.button1_nuxt a:hover::after {
+  left: 120%;
+}
+
+/* Neon border animation */
+@keyframes neonBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }/*# sourceMappingURL=main.css.map */
