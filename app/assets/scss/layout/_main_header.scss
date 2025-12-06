@@ -1,0 +1,269 @@
+.header{
+   width: 100%;
+    padding: clamp(10px, 2vw, 20px) 0;
+    position: sticky;
+    top: 0;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+
+.main_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo h4 {
+    font-size: clamp(20px, 2vw, 28px);
+    font-weight: 700;
+    color: #111;
+    span {
+    color: #ff4d4d;
+}
+}
+
+
+.nav_links {
+display: flex;
+align-items: center;
+gap: clamp(15px, 2vw, 30px);
+
+
+li {
+list-style: none;
+position: relative;
+
+
+a {
+font-size: clamp(14px, 1.4vw, 18px);
+font-weight: 500;
+color: #222;
+transition: 0.3s ease;
+padding: 5px 0;
+
+
+&::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0%;
+height: 2px;
+background: #ff4d4d;
+transition: width 0.3s ease;
+}
+
+
+&:hover::after {
+width: 100%;
+}
+
+
+&:hover {
+color: #ff4d4d;
+}
+}
+}
+}
+
+
+
+
+.chat-me button {
+    padding: 10px 22px;
+    border-radius: 50px;
+    border: none;
+    background: linear-gradient(90deg,rgba(155, 42, 104, 1) 0%, rgba(13, 11, 11, 0.69) 50%, rgba(145, 83, 237, 1) 100%);
+    background: linear-gradient(90deg,rgba(255, 15, 15, 0.84) 1%, rgba(141, 141, 240, 0.69) 50%, rgba(237, 83, 183, 0.85) 100%);
+    cursor: pointer;
+    transition: 0.3s;
+
+
+    a {
+    color: #fff;
+    font-weight: 600;
+    }
+
+
+    &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 77, 77, 0.75);
+    }
+}
+
+
+
+
+
+/* Responsive */
+.menu_toggle {
+    display: none ;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+
+
+    span {
+    width: 25px;
+    height: 3px;
+    background: #111;
+    transition: 0.3s ease;
+    }
+}
+
+
+@media (max-width: 991px) {
+.nav_links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: 0.4s ease;
+}
+
+
+.nav_links.show {
+    transform: translateX(0);
+}
+
+
+.menu_toggle {
+    display: flex;
+}
+}
+
+
+.nav_links.show {
+    transform: translateX(0);
+}
+
+
+
+/*=========  header top css =========*/
+.header_top {
+width: 100%;
+background: #0d0d0d;
+padding: clamp(0.2rem, .5vw, 0.5rem) 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.top_menu {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: clamp(1rem, 2vw, 2rem);
+}
+
+
+
+/* Marketplace Links */
+.marketplace ul {
+display: flex;
+align-items: center;
+gap: clamp(1rem, 2vw, 2.2rem);
+
+
+li a {
+font-size: clamp(1.2rem, 1.4vw, 1.2rem);
+color: #e5e5e5;
+position: relative;
+transition: 0.3s ease;
+
+
+&::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -4px;
+width: 0%;
+height: 2px;
+background: linear-gradient(90deg, #ff4d4d, #ffb84d);
+transition: 0.3s ease;
+}
+
+
+&:hover {
+color: #ffffff;
+}
+
+
+&:hover::after {
+width: 100%;
+}
+}
+}
+
+
+
+
+/* Social Media */
+.social_media ul {
+display: flex;
+align-items: center;
+gap: clamp(1rem, 1.4vw, 1rem);
+
+
+li a {
+width: clamp(2.6rem, 2.8vw, 3rem);
+height: clamp(2.6rem, 2.8vw, 3rem);
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(255, 255, 255, 0.08);
+border-radius: 50%;
+backdrop-filter: blur(4px);
+color: #ffffff;
+font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+transition: 0.35s ease;
+position: relative;
+overflow: hidden;
+
+
+&::before {
+content: "";
+position: absolute;
+width: 140%;
+height: 140%;
+background: linear-gradient(45deg, #ff4d4d, #ffb84d, #4d9fff);
+top: 100%;
+left: -20%;
+transition: 0.4s ease;
+z-index: -1;
+}
+
+
+&:hover::before {
+top: 0;
+}
+
+
+&:hover {
+transform: translateY(-4px) scale(1.08);
+box-shadow: 0 8px 20px rgba(255, 100, 100, 0.25);
+}
+}
+}
+
+
+/* Responsive */
+@media (max-width: 576px) {
+.top_menu {
+justify-content: center;
+text-align: center;
+}
+.marketplace ul {
+flex-wrap: wrap;
+justify-content: center;
+}
+}

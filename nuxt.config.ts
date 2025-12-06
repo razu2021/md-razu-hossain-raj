@@ -8,6 +8,7 @@ export default defineNuxtConfig({
 /**-------  link global css file start here ------- */
 css:[
   'bootstrap/dist/css/bootstrap.min.css',
+    "bootstrap-icons/font/bootstrap-icons.css",
   '~/assets/css/style.css',
   '~/assets/scss/main.scss',
 ],

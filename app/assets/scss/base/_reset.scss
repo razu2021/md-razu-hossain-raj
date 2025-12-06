@@ -16,9 +16,17 @@
 body {
   line-height: 1.6;
   font-family: 'Inter', sans-serif; /* base font */
-  background-color: #ffffff; /* optional default bg */
-  color: #212529; /* default text color */
+  transition: background 0.4s ease;
 }
+
+body.light-mode {
+  background: #ffffff;
+}
+
+body.dark-mode {
+  background: #000000;
+}
+
 
 /* Headings, paragraphs, lists */
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {

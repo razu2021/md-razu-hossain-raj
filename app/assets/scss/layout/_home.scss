@@ -1,0 +1,151 @@
+.index_banner {
+width: 100%;
+padding: clamp(4rem, 6vw, 10rem) 0;
+background: linear-gradient(135deg, #0a0a0a, #121212);
+color: #fff;
+position: relative;
+overflow: hidden;
+
+
+&::before {
+content: "";
+position: absolute;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(255, 80, 80, 0.4), transparent);
+top: -80px;
+left: -80px;
+filter: blur(80px);
+opacity: 0.8;
+}
+}
+
+.banner_wrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: clamp(2rem, 4vw, 6rem);
+flex-wrap: wrap;
+}
+
+.banner_content {
+width: 50%;
+min-width: 300px;
+
+
+h4 {
+font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+font-weight: 500;
+margin-bottom: 1rem;
+
+
+span {
+color: #ff4d4d;
+}
+}
+
+
+h1 {
+font-size: clamp(3rem, 4vw, 5rem);
+line-height: 1.2;
+margin-bottom: 1.6rem;
+
+
+span {
+color: #ffb84d;
+}
+}
+
+
+p {
+font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+color: #cfcfcf;
+line-height: 1.6;
+margin-bottom: 2.4rem;
+}
+}
+
+
+.primary_btn {
+padding: clamp(1rem, 1.2vw, 1.4rem) clamp(2.4rem, 3vw, 3.6rem);
+border-radius: 50px;
+background: linear-gradient(45deg, #ff4d4d, #ffb84d);
+border: none;
+cursor: pointer;
+position: relative;
+overflow: hidden;
+z-index: 1;
+transition: 0.3s ease;
+
+
+a {
+color: #fff;
+font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+font-weight: 600;
+}
+
+
+&:hover {
+transform: translateY(-4px);
+box-shadow: 0 8px 20px rgba(255, 120, 80, 0.3);
+}
+
+
+&::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(45deg, #ffb84d, #ff4d4d);
+z-index: -1;
+opacity: 0;
+transition: 0.4s ease;
+}
+
+
+&:hover::after {
+opacity: 1;
+}
+}
+
+
+.banner_image {
+width: 40%;
+min-width: 260px;
+position: relative;
+
+
+img {
+width: 100%;
+border-radius: 20px;
+z-index: 5;
+position: relative;
+}
+
+
+.img_glow {
+position: absolute;
+width: 100%;
+height: 100%;
+background: radial-gradient(circle, rgba(255, 180, 80, 0.3), transparent);
+filter: blur(60px);
+top: 0;
+left: 0;
+z-index: 0;
+}
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+.banner_content,
+.banner_image {
+width: 100%;
+text-align: center;
+}
+
+
+.banner_image img {
+max-width: 360px;
+margin: 0 auto;
+}
+}
