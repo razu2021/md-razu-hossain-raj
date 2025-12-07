@@ -1,3 +1,7 @@
+
+// ==== import variable css 
+@use '../abstracts/variables' as v;
+
 .index_banner {
   background: linear-gradient(135deg, #0b0f29, #1b1f3a);
   position: relative;
@@ -38,11 +42,11 @@
     animation: fadeUp 0.8s ease;
 
     h4 {
-      font-size: clamp(1.6rem, 2vw, 2.2rem);
+      font-size: clamp(1.2rem, 2vw, 2.2rem);
       font-weight: 400;
-      margin-bottom: 1.4rem;
       letter-spacing: .5rem;
       font-style: italic;
+      padding: clamp(1rem,2vw,2rem) 0;
       span {
         color: #00e0ff;
       }
@@ -51,20 +55,20 @@
     h1 {
       font-size: clamp(1.8rem, 3vw, 3rem);
       font-weight: 700;
-      margin-bottom: 2rem;
       line-height: 1.2;
+      color:v.$primary;
 
       span {
-        color: #00e0ff;
-        font-size: 6rem;
+        color: v.$secoundary;
+        font-size: clamp(1.8rem, 3vw, 3rem);
       }
     }
 
     p {
       font-size: clamp(1.2rem, 1.8vw, 1.6rem);
-      max-width: 90%;
       opacity: 0.9;
-      margin-bottom: 3rem;
+      padding: clamp(1.2rem ,2vw,3rem) 0;
+
     }
 
    
@@ -79,8 +83,9 @@
   display: flex;
   justify-content: flex-end;
 
+
   .image {
-    width: clamp(22rem, 40vw, 35rem);
+    width: clamp(12rem, 40vw, 35rem);
     height: auto;
     border-radius: clamp(.5rem, 1.8vw, 1.5rem);
     position: relative;
@@ -88,17 +93,28 @@
   }
 
   /* Overlay Big Text */
-  h1 {
+  p {
     position: absolute;
-    right: 1rem;
-    top: 0;
+    right: 0;
+    top: 15%;
     z-index: 0;
-    font-size: clamp(3rem, 6vw, 7rem);
+    font-size: clamp(1.2rem,1.8vw,1rem);
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.07);
-    letter-spacing: .5rem;
-    text-transform: uppercase;
+    color:#000;
     animation: textanimate 4s all;
+    font-weight: 900;
+    font-family: 'Monoton';
+    height: 12rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .5rem;
+    border: .5rem solid v.$secoundary;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    
   }
 }
 
@@ -124,3 +140,25 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+@media (max-width: 991.98px) {
+  .banner_content {
+    text-align: center;
+    padding: 2rem 0rem;
+  }
+
+  .banner_image {
+    text-align: center;
+    .image {
+      /* IMPORTANT PART */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      /* OR simply: margin auto */
+      margin: 0 auto;
+    }
+  }
+}
+
+

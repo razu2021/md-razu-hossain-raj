@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /*=======  button backgourn color =====*/
+/*=========  text color ========*/
 /* ===============================
    Reset / Normalize CSS
    Purpose: Remove browser default styles
@@ -128,11 +129,11 @@ q::before, q::after {
   animation: fadeUp 0.8s ease;
 }
 .index_banner .banner_content h4 {
-  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-size: clamp(1.2rem, 2vw, 2.2rem);
   font-weight: 400;
-  margin-bottom: 1.4rem;
   letter-spacing: 0.5rem;
   font-style: italic;
+  padding: clamp(1rem, 2vw, 2rem) 0;
 }
 .index_banner .banner_content h4 span {
   color: #00e0ff;
@@ -140,18 +141,17 @@ q::before, q::after {
 .index_banner .banner_content h1 {
   font-size: clamp(1.8rem, 3vw, 3rem);
   font-weight: 700;
-  margin-bottom: 2rem;
   line-height: 1.2;
+  color: #fff;
 }
 .index_banner .banner_content h1 span {
-  color: #00e0ff;
-  font-size: 6rem;
+  color: #FF014F;
+  font-size: clamp(1.8rem, 3vw, 3rem);
 }
 .index_banner .banner_content p {
   font-size: clamp(1.2rem, 1.8vw, 1.6rem);
-  max-width: 90%;
   opacity: 0.9;
-  margin-bottom: 3rem;
+  padding: clamp(1.2rem, 2vw, 3rem) 0;
 }
 
 /* IMAGE + GRADIENT BORDER */
@@ -164,23 +164,33 @@ q::before, q::after {
   /* Overlay Big Text */
 }
 .banner_image .image {
-  width: clamp(22rem, 40vw, 35rem);
+  width: clamp(12rem, 40vw, 35rem);
   height: auto;
   border-radius: clamp(0.5rem, 1.8vw, 1.5rem);
   position: relative;
   z-index: 1;
 }
-.banner_image h1 {
+.banner_image p {
   position: absolute;
-  right: 1rem;
-  top: 0;
+  right: 0;
+  top: 15%;
   z-index: 0;
-  font-size: clamp(3rem, 6vw, 7rem);
+  font-size: clamp(1.2rem, 1.8vw, 1rem);
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.07);
-  letter-spacing: 0.5rem;
-  text-transform: uppercase;
+  color: #000;
   animation: textanimate 4s all;
+  font-weight: 900;
+  font-family: "Monoton";
+  height: 12rem;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: 0.5rem solid #FF014F;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }
 
 /* Animated Border (REAL BORDER) */
@@ -209,6 +219,23 @@ q::before, q::after {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@media (max-width: 991.98px) {
+  .banner_content {
+    text-align: center;
+    padding: 2rem 0rem;
+  }
+  .banner_image {
+    text-align: center;
+  }
+  .banner_image .image {
+    /* IMPORTANT PART */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* OR simply: margin auto */
+    margin: 0 auto;
   }
 }
 .header {
@@ -428,8 +455,8 @@ q::before, q::after {
 .button1_nuxt a {
   position: relative;
   display: inline-block;
-  padding: clamp(1rem, 1.3vw, 1rem) clamp(1.5rem, 3vw, 2rem);
-  font-size: clamp(1.4rem, 1.7vw, 1.6rem);
+  padding: clamp(1rem, 2vw, 1rem) clamp(1rem, 2vw, 1rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   font-weight: 600;
   color: #ffffff;
   text-decoration: none;

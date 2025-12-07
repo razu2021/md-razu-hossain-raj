@@ -31,7 +31,7 @@
     <section class="index_banner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-8 col-md-7 col-12">
+                <div class="col-lg-7 col-md-7 col-12">
                     <div class="banner_content">
                         <h4>Thank's for your <span>Kind</span></h4>
                         <h1>
@@ -48,10 +48,10 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4 col-md-5 col-12">
+                <div class="col-lg-5 col-md-5 col-12">
                     <div class="banner_image ">
                         <NuxtImg src="/6.png" class="image" />
-                        <h1 class="">Web Developer </h1>
+                        <p class="">I am a passionate Full-Stack Developer who transforms ideas into fast, scalable, and user-friendly digital experiences. I specialize in creating clean, modern UI on the front-end and building powerful, secure, and optimized systems on the back-end.</p>
                     </div>
                 </div>
             </div>
