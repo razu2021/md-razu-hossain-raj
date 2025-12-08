@@ -1,0 +1,56 @@
+// use variable 
+@use '../abstracts/variables' as v;
+
+
+//==================  card1 scss start here ==============
+.card_1 {
+    text-align: center;
+    background-color: v.$card1_bg;
+    padding: clamp(1.6rem, 3vw, 2rem);
+    border-radius: 1rem;
+    border: 0.1rem solid v.$border1;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 3px v.$box_shadow1;
+    h4 {
+        color: v.$secoundary;
+        padding-bottom: 1rem;
+    }
+    h2 {
+        color: v.$primary;
+        font-size: clamp(1.6rem, 1.8vw, 1rem);
+        padding-bottom: 0.5rem;
+    }
+    p {
+        color: v.$pcolor;
+    }
+    &:hover {
+        transform: translateY(-10px); // smooth upward movement
+    }
+}
+
+
+
+///==================  card2  css start here =========
+
+.card_2{
+    background: v.$card2_bg;
+    padding: clamp(1.3rem,2vw,3rem);
+    border-radius: 1rem;
+    h2{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        strong{
+            font-size: 9rem;
+            color: v.$secoundary;
+            padding: 1rem;
+        }
+        span{
+            font-size: clamp(1.3rem,2vw,3rem);
+            color:v.$primary;
+        }
+    }
+    p{
+        color: v.$primary
+    }
+}

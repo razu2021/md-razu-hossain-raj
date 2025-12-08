@@ -105,3 +105,10 @@ img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+
+
+
+/*===========  seciton csss =======*/
+.section-padding{
+    padding: clamp(1.8rem,2vw,5rem) 0;
+}

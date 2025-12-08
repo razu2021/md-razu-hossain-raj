@@ -1,4 +1,13 @@
-/*=======  button backgourn color =====*/
+
+// ------------ card background variable --------
+$card1_bg:#000;
+$card2_bg:linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(0,0,0,0.40) 0%, rgba(231, 2, 2, 0.4) 120%) #989898;
+
+
+
+
+
+
 $button_1 : linear-gradient(103deg,rgba(32, 104, 230, 0.68) 0%, rgba(255, 36, 61, 0.81) 40%, rgba(255, 200, 206, 0.98) 65%, rgba(5, 5, 240, 0.58) 93%);
 
 
@@ -10,6 +19,16 @@ $button_1 : linear-gradient(103deg,rgba(32, 104, 230, 0.68) 0%, rgba(255, 36, 61
 
 
 
-/*=========  text color ========*/
+// ========= color variable 
 $primary: #fff;
 $secoundary : #FF014F;
+
+$pcolor : #555;
+
+
+
+/*=======  box shadow ====*/
+$box_shadow1 : #3E1420;
+
+// ========== border color 
+$border1: #3E1420;

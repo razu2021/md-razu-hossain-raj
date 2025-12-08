@@ -1,0 +1,52 @@
+.breadcrumb_area {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../images/bg1.jpg');
+
+
+
+  
+
+  .breadcrumb_content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+
+    h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .breadcrumb_nav {
+      font-size: 1rem;
+      margin-top: 0.3rem;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+
+        &:hover {
+          color: #ff4f4f;
+        }
+      }
+
+      span {
+        padding: 0 6px;
+        opacity: 0.8;
+      }
+    }
+  }
+}

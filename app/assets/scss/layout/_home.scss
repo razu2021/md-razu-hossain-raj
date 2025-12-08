@@ -103,7 +103,7 @@
     color:#000;
     animation: textanimate 4s all;
     font-weight: 900;
-    font-family: 'Monoton';
+    font-family: 'Roboto';
     height: 12rem;
     width: 100%;
     background-color: #fff;
@@ -158,6 +158,40 @@
       /* OR simply: margin auto */
       margin: 0 auto;
     }
+  }
+}
+
+
+
+// ============ my achivment csss start here 
+
+
+.my_achivment {
+  background-color: rgb(8, 1, 1);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  border-top-right-radius: 1px solid red; // check typo: maybe you meant border-top-right? corrected below
+  border: 1px solid #fff; // optional
+
+  // Default box-shadow and smooth transition
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  h2 {
+    color: v.$primary;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-weight: 900;
+    font-family: 'Open Sans';
+  }
+  p{
+    color: v.$primary;
+  }
+
+  &:hover {
+    transform: translateY(-5px); // slight upward lift
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // stronger shadow on hover
+    background-color: darken(#131212, 5%); // subtle darkening on hover
   }
 }
 

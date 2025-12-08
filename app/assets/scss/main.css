@@ -1,11 +1,3 @@
-@charset "UTF-8";
-/*=======  button backgourn color =====*/
-/*=========  text color ========*/
-/* ===============================
-   Reset / Normalize CSS
-   Purpose: Remove browser default styles
-   =============================== */
-/* Universal selector: margin, padding zero + box-sizing */
 *,
 *::before,
 *::after {
@@ -14,52 +6,37 @@
   box-sizing: border-box;
 }
 
-/* Body default styles */
 body {
   line-height: 1.6;
-  font-family: "Inter", sans-serif; /* base font */
-  transition: background 0.4s ease;
+  font-family: "Inter", sans-serif;
+  background: #060606;
 }
 
-body.light-mode {
-  background: #ffffff;
-}
-
-body.dark-mode {
-  background: #000000;
-}
-
-/* Headings, paragraphs, lists */
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   margin: 0;
   padding: 0;
 }
 
-/* Lists remove bullets and default margin */
 ul, ol {
   list-style: none;
 }
 
-/* Anchor tags */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Images, videos, canvas, svg — make responsive */
 img, video, canvas, svg, picture {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Tables */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Form elements */
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
@@ -70,12 +47,10 @@ button, input, select, textarea {
   outline: none;
 }
 
-/* Remove focus outline for clickable elements (optional) */
 button:focus, input:focus, select:focus, textarea:focus {
   outline: none;
 }
 
-/* Misc helpers */
 hr {
   border: none;
   height: 1px;
@@ -91,6 +66,12 @@ q::before, q::after {
   content: "";
 }
 
+.section-padding {
+  background-color: transparent;
+  padding: clamp(2rem, 6vw, 7rem);
+}
+
+/*=======  box shadow ====*/
 .index_banner {
   background: linear-gradient(135deg, #0b0f29, #1b1f3a);
   position: relative;
@@ -180,7 +161,7 @@ q::before, q::after {
   color: #000;
   animation: textanimate 4s all;
   font-weight: 900;
-  font-family: "Monoton";
+  font-family: "Roboto";
   height: 12rem;
   width: 100%;
   background-color: #fff;
@@ -238,6 +219,31 @@ q::before, q::after {
     margin: 0 auto;
   }
 }
+.my_achivment {
+  background-color: rgb(8, 1, 1);
+  text-align: center;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  border-top-right-radius: 1px solid red;
+  border: 1px solid #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.my_achivment h2 {
+  color: #fff;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 900;
+  font-family: "Open Sans";
+}
+.my_achivment p {
+  color: #fff;
+}
+.my_achivment:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(5.9054054054, 5.5945945946, 5.5945945946);
+}
+
 .header {
   width: 100%;
   padding: clamp(10px, 2vw, 20px) 0;
@@ -514,4 +520,94 @@ q::before, q::after {
   100% {
     background-position: 0% 50%;
   }
+}
+.card_1 {
+  text-align: center;
+  background-color: #000;
+  padding: clamp(1.6rem, 3vw, 2rem);
+  border-radius: 1rem;
+  border: 0.1rem solid #3E1420;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 3px #3E1420;
+}
+.card_1 h4 {
+  color: #FF014F;
+  padding-bottom: 1rem;
+}
+.card_1 h2 {
+  color: #fff;
+  font-size: clamp(1.6rem, 1.8vw, 1rem);
+  padding-bottom: 0.5rem;
+}
+.card_1 p {
+  color: #555;
+}
+.card_1:hover {
+  transform: translateY(-10px);
+}
+
+.card_2 {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(0, 0, 0, 0.4) 0%, rgba(231, 2, 2, 0.4) 120%) #989898;
+  padding: clamp(1.3rem, 2vw, 3rem);
+  border-radius: 1rem;
+}
+.card_2 h2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card_2 h2 strong {
+  font-size: 9rem;
+  color: #FF014F;
+  padding: 1rem;
+}
+.card_2 h2 span {
+  font-size: clamp(1.3rem, 2vw, 3rem);
+  color: #fff;
+}
+.card_2 p {
+  color: #fff;
+}
+
+.breadcrumb_area {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../images/bg1.jpg");
+}
+.breadcrumb_area .breadcrumb_content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+.breadcrumb_area .breadcrumb_content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+.breadcrumb_area .breadcrumb_content .breadcrumb_nav {
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+.breadcrumb_area .breadcrumb_content .breadcrumb_nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.breadcrumb_area .breadcrumb_content .breadcrumb_nav a:hover {
+  color: #ff4f4f;
+}
+.breadcrumb_area .breadcrumb_content .breadcrumb_nav span {
+  padding: 0 6px;
+  opacity: 0.8;
 }/*# sourceMappingURL=main.css.map */

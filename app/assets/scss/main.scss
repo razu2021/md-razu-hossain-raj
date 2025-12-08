@@ -1,4 +1,12 @@
 
+// -------------------------
+// 2. Base
+// -------------------------
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/forms';
+@use 'base/images';
+
 
 // -------------------------
 // 1. Abstracts
@@ -7,13 +15,7 @@
 @use 'abstracts/mixins';
 @use 'abstracts/functions';
 
-// -------------------------
-// 2. Base
-// -------------------------
-@use 'base/reset';
-@use 'base/typography';
-@use 'base/forms';
-@use 'base/images';
+
 
 // -------------------------
 // 3. Layout
@@ -28,6 +30,7 @@
 @use 'components/buttons';
 @use 'components/cards';
 @use 'components/modals';
+@use 'components/banner';
 
 // -------------------------
 // 5. Utilities

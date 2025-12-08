@@ -6,5 +6,7 @@
 <template>
 <!-- banner  -->
 <HomeBanner/>
+<HomeOffer/>
+<HomeAchivment />
   
 </template>

@@ -1,9 +1,11 @@
-/* ===============================
-   Reset / Normalize CSS
-   Purpose: Remove browser default styles
-   =============================== */
 
-/* Universal selector: margin, padding zero + box-sizing */
+
+
+
+
+
+   
+// Universal selector: margin, padding zero + box-sizing 
 *,
 *::before,
 *::after {
@@ -12,54 +14,47 @@
   box-sizing: border-box;
 }
 
-/* Body default styles */
+// * Body default styles
 body {
   line-height: 1.6;
-  font-family: 'Inter', sans-serif; /* base font */
-  transition: background 0.4s ease;
+  font-family: 'Inter', sans-serif; 
+  background: #060606;
   
 }
 
-body.light-mode {
-  background: #ffffff;
-}
-
-body.dark-mode {
-  background: #000000;
-}
 
 
-/* Headings, paragraphs, lists */
+//* Headings, paragraphs, lists */
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {
   margin: 0;
   padding: 0;
 }
 
-/* Lists remove bullets and default margin */
+//* Lists remove bullets and default margin */
 ul, ol {
   list-style: none;
 }
 
-/* Anchor tags */
+//* Anchor tags */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Images, videos, canvas, svg — make responsive */
+//* Images, videos, canvas, svg — make responsive */
 img, video, canvas, svg, picture {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-/* Tables */
+//* Tables */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Form elements */
+//* Form elements */
 button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
@@ -70,12 +65,12 @@ button, input, select, textarea {
   outline: none;
 }
 
-/* Remove focus outline for clickable elements (optional) */
+//* Remove focus outline for clickable elements (optional) */
 button:focus, input:focus, select:focus, textarea:focus {
   outline: none;
 }
 
-/* Misc helpers */
+//* Misc helpers */
 hr {
   border: none;
   height: 1px;
@@ -89,4 +84,12 @@ blockquote, q {
 blockquote::before, blockquote::after,
 q::before, q::after {
   content: '';
+}
+
+
+
+
+.section-padding{
+  background-color: transparent;
+  padding: clamp(2rem,6vw,7rem)  ;
 }

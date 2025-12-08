@@ -7,7 +7,7 @@
 
 <!-- =====  template section start here ========= -->
 <template>
-    <h1>Contact page </h1>
+   <CommonBreadcrumb />
 </template>
 
 <!-- ======== style section start here ========== -->
