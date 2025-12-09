@@ -8,5 +8,7 @@
 <HomeBanner/>
 <HomeOffer/>
 <HomeAchivment />
-  
+<HomeInspair />
+
+
 </template>

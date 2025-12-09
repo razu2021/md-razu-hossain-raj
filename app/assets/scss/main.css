@@ -9,7 +9,7 @@
 body {
   line-height: 1.6;
   font-family: "Inter", sans-serif;
-  background: #060606;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, li {
@@ -569,6 +569,20 @@ q::before, q::after {
   color: #fff;
 }
 
+.card_4 {
+  background-color: rgb(27, 13, 13);
+  text-align: center;
+  padding: clamp(1.3rem, 1.8vw, 2rem);
+  border-radius: 0.5rem;
+  border: 1px solid #3E1420;
+  box-shadow: #3E1420;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+}
+
 .breadcrumb_area {
   position: relative;
   width: 100%;
@@ -580,7 +594,7 @@ q::before, q::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("../../images/bg1.jpg");
+  background-image: url("../../images/bg2.jpg");
 }
 .breadcrumb_area .breadcrumb_content {
   position: relative;
