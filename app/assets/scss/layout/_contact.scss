@@ -1,0 +1,297 @@
+.contact-form-section {
+  padding: clamp(1.5rem, 3vw, 3rem) 0;
+
+  .contact-card {
+    background: #ffffff;
+    padding: clamp(1.8rem, 3vw, 2.8rem);
+    border-radius: 1rem;
+    border: 1px solid rgba(0,0,0,0.07);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    transition: 0.25s ease;
+
+    &:hover {
+      box-shadow: 0 8px 26px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+  }
+
+  .form-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .form-subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.3rem);
+    color: #666;
+    text-align: center;
+    margin-bottom: clamp(1.5rem, 2vw, 2.5rem);
+  }
+
+  .form-label {
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin-bottom: .3rem;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .custom-input {
+    border-radius: .6rem;
+
+    border: 1px solid rgba(0,0,0,0.12);
+    font-size: clamp(1.2rem, 2vw, 1.2rem);
+    background-color: #fafafa;
+    transition: all 0.25s ease;
+
+    &:focus {
+      background-color: #fff;
+      border-color: #3e6bff;
+      box-shadow: 0 0 0 .15rem rgba(62,107,255,0.25);
+    }
+  }
+
+  textarea.custom-input {
+    min-height: clamp(8rem, 12vw, 10rem);  // compact textarea
+  }
+
+  .submit-btn {
+    background: #3e6bff;
+    color: #fff;
+    
+    border-radius: .7rem;
+    font-size: clamp(1.1rem, 2vw, 1.2rem);
+    border: none;
+    margin-top: .5rem;
+    transition: all .25s ease;
+
+    &:hover {
+      background: #3357d4;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+
+// ================ social section css start here ==========
+/* Section Base */
+.social-section {
+  background: #f9fafc;
+}
+
+/* Left Content */
+.social-heading {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #1b1c1e;
+}
+
+.social-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  max-width: 450px;
+}
+
+/* Right Title */
+.social-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.social-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Social Icons */
+.social-wrapper {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+/* Hover Effect */
+.social-icon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* Icon Colors */
+.social-icon.facebook { color: #1877F2; }
+.social-icon.instagram { color: #E1306C; }
+.social-icon.youtube { color: #FF0000; }
+.social-icon.whatsapp { color: #25D366; }
+.social-icon.linkedin { color: #0A66C2; }
+
+
+
+// ==============  faq section css start here =============
+.faq-support-section {
+  padding: clamp(2rem, 4vw, 4.5rem) 0;
+
+  .section-title {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1b1c1e;
+  }
+
+  .section-subtitle {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    color: #555;
+    margin-bottom: clamp(1.5rem, 2.5vw, 2rem);
+  }
+
+  /* FAQ Styles */
+  .faq-wrapper {
+    .accordion-item {
+      border-radius: 1rem;
+      border: 1px solid rgba(0,0,0,0.08);
+      margin-bottom: clamp(1rem, 1.5vw, 1.4rem);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+      transition: 0.25s ease;
+
+      &:hover {
+        box-shadow: 0 8px 26px rgba(0,0,0,0.07);
+        transform: translateY(-2px);
+      }
+    }
+
+    .accordion-button {
+      font-size: clamp(1.3rem, 2vw, 1.5rem);
+      padding: clamp(.9rem, 1.8vw, 1.2rem);
+      font-weight: 600;
+      border: none;
+      color: #222;
+
+      &:not(.collapsed) {
+        background: #f3f6ff;
+        color: #3558ff;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .accordion-body {
+      font-size: clamp(1.2rem, 2vw, 1.4rem);
+      color: #555;
+      padding: clamp(.9rem, 1.8vw, 1.2rem);
+    }
+  }
+
+  /* Support Styles */
+  .support-wrapper {
+    background: #ffffff;
+    padding: clamp(1.8rem, 3vw, 2.8rem);
+    border-radius: 1.2rem;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: 0 5px 22px rgba(0,0,0,0.05);
+    transition: 0.25s ease;
+
+    &:hover {
+      box-shadow: 0 8px 26px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .time-box {
+      margin-bottom: clamp(2rem, 3vw, 2.8rem);
+
+      .time-row {
+        background: #f8f9ff;
+        padding: clamp(1rem, 1.8vw, 1.4rem);
+        border-radius: .8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: clamp(.8rem, 1.5vw, 1.2rem);
+        border: 1px solid rgba(0,0,0,0.05);
+
+        span {
+          font-size: clamp(1.2rem, 2vw, 1.4rem);
+          color: #444;
+
+          i {
+            margin-right: .4rem;
+            color: #3558ff;
+          }
+        }
+
+        strong {
+          font-size: clamp(1.2rem, 2vw, 1.4rem);
+          color: #111;
+        }
+      }
+    }
+
+    .live-chat-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      background: #25d366;
+      color: #fff;
+      font-size: clamp(1.3rem, 2vw, 1.5rem);
+      padding: clamp(.9rem, 1.8vw, 1.2rem) clamp(2rem, 4vw, 2.6rem);
+      border-radius: .9rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.25s ease;
+
+      i {
+        font-size: clamp(1.5rem, 2vw, 1.8rem);
+      }
+
+      &:hover {
+        background: #1ec45a;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 22px rgba(37,211,102,0.35);
+      }
+    }
+  }
+}
+
+
+// =========  google map css start here ===========
+.contact-map-section .section-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.contact-map-section .section-subtitle {
+  font-size: 16px;
+  color: #555;
+}
+
+.map-container {
+  width: 100%;
+  height: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
