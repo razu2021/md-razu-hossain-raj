@@ -21,6 +21,9 @@
 // 3. Layout
 // -------------------------
 @use 'layout/home';
+@use 'layout/about';
+@use 'layout/service';
+@use 'layout/project';
 @use 'layout/blog';
 @use 'layout/contact';
 @use 'layout/main_header';

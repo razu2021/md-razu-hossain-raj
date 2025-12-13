@@ -1,0 +1,107 @@
+.site_footer {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: #fff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  padding: clamp(4rem, 5vw, 5rem) 0;
+
+  .container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+
+  .footer_top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(2rem, 3vw, 2.5rem);
+    margin-bottom: 2.5rem;
+
+    .footer_column {
+      h2, h3 {
+        font-size: clamp(1.5rem, 2.5vw, 1.8rem);
+        margin-bottom: 1rem;
+      }
+
+      p, li, a {
+        font-size: clamp(0.85rem, 1.2vw, 1rem);
+        color: #d1d5db;
+        line-height: 1.6;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.6rem;
+
+          a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #0ea5e9; // light blue on hover
+            }
+          }
+        }
+      }
+
+      .social_icons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        a {
+          display: inline-block;
+          width: 2.2rem;
+          height: 2.2rem;
+          background: rgba(255,255,255,0.1);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: #0ea5e9;
+            transform: translateY(-0.2rem);
+          }
+
+          img {
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+
+  .footer_bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    color: #9ca3af;
+  }
+
+  @media (max-width: 768px) {
+    .footer_top {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer_top {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      text-align: center;
+
+      .social_icons {
+        justify-content: center;
+      }
+    }
+  }
+}
