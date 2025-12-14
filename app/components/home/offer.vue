@@ -6,6 +6,12 @@
 <template>
     <section class="my_offers section-padding">
         <div class="container">
+            <div class="row mb-5">
+                <div class="col text-center">
+                    <h2 class="section-title">Skills & Tech Stack</h2>
+                    <p class="section-desc">Tools & technologies I work with on a regular basis</p>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
                     <div class="card_1">
