@@ -24,13 +24,13 @@
                                 <NuxtLink to="/about">About</NuxtLink>
                             </li>
                             <li>
-                                <NuxtLink to="/services">Services</NuxtLink>
+                                <NuxtLink to="">Services</NuxtLink>
                             </li>
                             <li>
-                                <NuxtLink to="/projects">Projects</NuxtLink>
+                                <NuxtLink to="">Projects</NuxtLink>
                             </li>
                             <li>
-                                <NuxtLink to="/contact">Contact</NuxtLink>
+                                <NuxtLink to="">Contact</NuxtLink>
                             </li>
                         </ul>
                     </div>

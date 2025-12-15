@@ -201,7 +201,7 @@
   &:hover {
     transform: translateY(-5px); // slight upward lift
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // stronger shadow on hover
-    background-color: darken(#131212, 5%); // subtle darkening on hover
+    background-color: #131212; // subtle darkening on hover
   }
 }
 
