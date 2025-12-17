@@ -97,12 +97,12 @@ $SplitText.create(element, {
 
 <!-- =====  template section start here ========= -->
 <template>
-    <section class="index_banner box3" id="smooth-wrapper">
-        <div class="container" id="smooth-content">
+    <section class="index_banner box3" >
+        <div class="container" >
             <div class="row align-items-center">
                 <div class="col-lg-7 col-md-7 col-12">
                     <div class="banner_content">
-                        <h4 class="animate1">Thank's for your <span>Kind</span></h4>
+                        <h4 class="animate1" >Thank's for your <span>Kind</span></h4>
                         <h1>
                             HI, I'm Md Razu Hossain Raj <br />
                             <span id="typedEl"></span>
@@ -118,7 +118,7 @@ $SplitText.create(element, {
                 </div>
 
                 <div class="col-lg-5 col-md-5 col-12">
-                    <div class="banner_image ">
+                    <div class="banner_image " >
                         <NuxtImg src="/6.png" class="image box1" />
                         <p class="animate3">I am a passionate Full-Stack Developer who transforms ideas into fast, scalable, and user-friendly digital experiences. I specialize in creating clean, modern UI on the front-end and building powerful, secure, and optimized systems on the back-end.</p>
                     </div>

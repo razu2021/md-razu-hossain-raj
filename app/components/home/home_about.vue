@@ -1,11 +1,30 @@
+<!-- =========== script code == ========= -->
+<script setup lang="ts">
+import { onMounted } from "vue";
+
+
+
+
+// -------  use onmount .. after load the all content its start working 
+
+
+
+
+
+
+
+</script>
+
+
+
 <template>
         <!-- =========================== about section ============== -->
     <!-- ===== About Section (Bootstrap 5 + SCSS | Home Page) ===== -->
-    <section class="about-section section-padding">
+    <section class="about-section section-padding" >
         <div class="container">
-            <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4" >
                 <!-- Left Content -->
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-speed="1.5">
                     <span class="about-subtitle">ABOUT ME</span>
                     <h2 class="about-title">I Build Modern & Scalable Web Applications</h2>
                     <p class="about-text">
@@ -37,7 +56,7 @@
                 </div>
 
                 <!-- Right Visual -->
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-speed="1.5">
                     <div class="about-card">
                         <ul>
                             <li>✔ Clean & Maintainable Code</li>
@@ -51,6 +70,7 @@
         </div>
     </section>
 </template>
+
 
 
 

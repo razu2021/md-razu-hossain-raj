@@ -4,7 +4,7 @@
 </script>
 <!-- =====  template section start here ========= -->
 <template>
-    <section class="my_offers section-padding">
+    <section class="my_offers section-padding" data-speed="1.5">
         <div class="container">
             <div class="row mb-5">
                 <div class="col text-center">

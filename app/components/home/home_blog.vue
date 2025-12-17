@@ -1,6 +1,6 @@
 <template>
         <!-- ===== Blog / Articles Section (Modern + card_6) ===== -->
-    <section class="blog-articles-section py-5">
+    <section class="blog-articles-section py-5" data-speed="1.5">
         <div class="container">
             <div class="row mb-5 text-center">
                 <div class="col">

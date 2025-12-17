@@ -7,7 +7,7 @@
 
 <!-- =====  template section start here ========= -->
 <template>
-    <section class="section-padding">
+    <section class="section-padding" data-speed="1.5">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 mb-3">

@@ -12,12 +12,24 @@ body{
     scroll-behavior: smooth;
     font-family: "Open Sans", sans-serif;
     background-color: #010A10; 
+  
 }
 
 /* ===== Global Font Scale Setup ===== */
 html {
     font-size: 62.5%;  /* 1rem = 10px */
 }
+#smooth-wrapper{
+    position: fixed;
+}
+#smooth-content {
+  position: relative;
+  width: 100%;
+  will-change: transform;
+}
+
+
+
 
 /* ===== Headings ===== */
 h1 {

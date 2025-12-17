@@ -1,6 +1,6 @@
 <template>
         <!-- ===== Project Types / What I Build Section ===== -->
-    <section class="project-types-section py-5 position-relative overflow-hidden">
+    <section class="project-types-section py-5 position-relative overflow-hidden" data-speed="1.5">
         <div class="container position-relative z-1">
             <div class="row mb-5 text-center">
                 <div class="col">

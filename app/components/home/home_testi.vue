@@ -1,6 +1,6 @@
 <template>
         <!-- ===== Testimonial2 Section / Google Review Style ===== -->
-    <section class="testimonial2 py-5">
+    <section class="testimonial2 py-5" data-speed="1.5">
         <div class="container">
             <div class="row mb-5 text-center">
                 <div class="col">

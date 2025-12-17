@@ -1,8 +1,8 @@
 <template>
         <!-- ===== Skills / Tech Stack (Bootstrap 5 + SCSS | Category Cards) ===== -->
-    <section class="skills-section py-5">
+    <section class="skills-section section-padding" data-speed="1.5">
         <div class="container">
-            <div class="row mb-5">
+            <div class="row mb-5" >
                 <div class="col text-center">
                     <h2 class="section-title">Skills & Tech Stack</h2>
                     <p class="section-desc">Tools & technologies I work with on a regular basis</p>
