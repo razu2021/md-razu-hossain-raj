@@ -6,24 +6,24 @@
 <template>
 
 
-                <!-- banner  -->
-                <HomeBanner />
-                <!-- home about -->
-                <HomeAbout/>
-                <!-- tech skill  -->
-                <HomeTechskill />
-                <!-- what type of website i build  -->
-                <HomeBuildWeb/>
-                <!-- my service  -->
-                <HomeOffer />
-                <!-- Cta section  -->
-                <HomeCta/>
+    <!-- banner  -->
+    <HomeBanner />
+    <!-- home about -->
+    <HomeAbout/>
+    <!-- tech skill  -->
+    <HomeTechskill />
+    <!-- what type of website i build  -->
+    <HomeBuildWeb/>
+    <!-- my service  -->
+    <HomeOffer />
+    <!-- Cta section  -->
+    <HomeCta/>
 
-                <!-- achivement section  -->
-                <HomeAchivment />
-                <HomeTesti/>
+    <!-- achivement section  -->
+    <HomeAchivment />
+    <HomeTesti/>
 
-                <HomeBlog/>
+    <HomeBlog/>
 
 
 
