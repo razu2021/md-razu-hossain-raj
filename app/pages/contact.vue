@@ -1,6 +1,32 @@
 <!-- ========  script section start her ====== -->
 <script setup lang="ts">
 
+import { onMounted ,onBeforeMount,ref, } from 'vue';
+import { useNuxtApp } from '#app';
+
+
+onMounted(()=>{
+  const {$gsap} = useNuxtApp();
+
+
+  // ---- contact box animation 
+  $gsap.from(".card_4",{
+    opacity: 0,
+    y:100,
+    x:500,
+    duration:5,
+     ease: "elastic"
+
+  })
+
+
+  
+
+})
+
+
+
+
 </script>
 
 
@@ -10,11 +36,14 @@
    <CommonBreadcrumb />
 
 
+
+
+
    <section class="section-padding ">
       <div class="container">
          <div class="row">
             <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4 mb-3">
-               <div class="card_4">
+               <div class="card_4 " >
                   <h4><i class="bi bi-envelope"></i></h4>
                   <h2>E-Mail</h2>
                   <a href="mailto:mdrazuhossainraj">mdrazuhossainraj@gmail.com</a>

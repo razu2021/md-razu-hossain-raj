@@ -4,6 +4,8 @@
     /**============ use Scroll Smoother ======= */
     const {smoother} = useScrollSmoother()
 
+
+
 </script>
 
 
@@ -43,6 +45,6 @@
 
 
 <!-- ==========  style ==================== -->
- <style scoped>
+ <style >
 
 </style>
