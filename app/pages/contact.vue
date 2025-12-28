@@ -1,27 +1,34 @@
 <!-- ========  script section start her ====== -->
 <script setup lang="ts">
 
-import { onMounted ,onBeforeMount,ref, } from 'vue';
-import { useNuxtApp } from '#app';
+import { onMounted ,onBeforeMount,ref } from 'vue';
+
+import { useNuxtApp,onPrehydrate } from '#app';
 
 
-onMounted(()=>{
-  const {$gsap} = useNuxtApp();
 
 
-  // ---- contact box animation 
-  $gsap.from(".card_4",{
-    opacity: 0,
-    y:100,
-    x:500,
-    duration:5,
-     ease: "elastic"
 
+
+
+onPrehydrate(() => {
+  document.querySelectorAll<HTMLElement>('.card_4')
+    .forEach(el => {
+      el.style.opacity = '0'
+      el.style.transform = 'translate(500px, 100px)'
+    })
+})
+
+onMounted(() => {
+  const { $gsap } = useNuxtApp()
+
+  $gsap.to('.card_4', {
+    opacity: 1,
+    x: 0,
+    y: 0,
+    duration: 1.2,
+    ease: 'power3.out'
   })
-
-
-  
-
 })
 
 

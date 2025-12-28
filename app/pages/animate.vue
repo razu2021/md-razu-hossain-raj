@@ -1,40 +1,41 @@
 <template>
+ <h1 :style="{fontSize}" id="testfont"> hello , my name is razu hossain raj </h1>
  
+  <p>set font size is : {{ fontSize }}</p>
+ <button class="btn btn-success mx-2" @click="changeFontSize('10px')">10px</button>
+ <button class="btn btn-success mx-2" @click="changeFontSize('20px')">20px</button>
+ <button class="btn btn-success mx-2" @click="changeFontSize('30px')">30px</button>
+ <button class="btn btn-success mx-2" @click="changeFontSize('40px')">40px</button>
+ <button class="btn btn-success mx-2" @click="changeFontSize('60px')">60px</button>
+  
 </template>
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import { useNuxtApp } from "#app";
+import { useNuxtApp , onPrehydrate} from "#app";
  
 
 
-onMounted(() => {
-  const { $gsap, $ScrollTrigger,$ScrollSmoother } = useNuxtApp();
+const fontSize = ref('80px')
 
- const smoother = $ScrollSmoother.get();
-console.log("Wrapper element:", smoother);
+onPrehydrate(()=>{
+  const size = localStorage.getItem('fontSize') || '80px';
+  
+})
 
-});
+
+
+const changeFontSize = (size : string) =>{
+  fontSize.value= size
+
+  // --- save the font size in localstorage 
+ 
+
+  localStorage.setItem('fontSize',size);
+}
+
 </script>
 
 <style scoped>
-.section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
 
-.animate-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.animate-text {
-  font-size: 1.2rem;
-  max-width: 600px;
-  text-align: center;
-}
 </style>
