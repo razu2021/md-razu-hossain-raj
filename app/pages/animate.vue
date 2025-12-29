@@ -1,41 +1,47 @@
 <template>
- <h1 :style="{fontSize}" id="testfont"> hello , my name is razu hossain raj </h1>
- 
-  <p>set font size is : {{ fontSize }}</p>
- <button class="btn btn-success mx-2" @click="changeFontSize('10px')">10px</button>
- <button class="btn btn-success mx-2" @click="changeFontSize('20px')">20px</button>
- <button class="btn btn-success mx-2" @click="changeFontSize('30px')">30px</button>
- <button class="btn btn-success mx-2" @click="changeFontSize('40px')">40px</button>
- <button class="btn btn-success mx-2" @click="changeFontSize('60px')">60px</button>
+ <section class="section1" id="sectiontest">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1> Hello , this container in only for testing </h1>
+          <h2>{{ appConfig.siteName }}</h2>
+        </div>
+      </div>
+    </div>
+ </section>
   
 </template>
 
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { useNuxtApp , onPrehydrate} from "#app";
+import appConfig from "~/plugins/app.config";
  
 
-
-const fontSize = ref('80px')
-
-onPrehydrate(()=>{
-  const size = localStorage.getItem('fontSize') || '80px';
-  
+ onPrehydrate(() => {
+  document
+    .getElementById('sectiontest')
+    ?.classList.add('section2')
 })
 
 
-
-const changeFontSize = (size : string) =>{
-  fontSize.value= size
-
-  // --- save the font size in localstorage 
- 
-
-  localStorage.setItem('fontSize',size);
-}
+// onMounted(()=>{
+//    onPrehydrate(() => {
+//   document
+//     .getElementById('sectiontest')
+//     ?.classList.add('section1')
+// })
+// })
 
 </script>
 
 <style scoped>
+.section1{
+  background-color: red;
+  padding: 20px;
 
+}
+.section2{
+  opacity: 50%;
+}
 </style>

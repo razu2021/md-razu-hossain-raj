@@ -15,8 +15,13 @@ export default defineNuxtConfig({
 
   /**------ link global js file from plugins folder -------- */
   plugins:[
-    '~/plugins/plugin.client.ts'  
+    '~/plugins/plugin.client.ts'  ,
+    '~/plugins/app.config.ts'  
   ],
 
-  modules: ['@nuxt/image']
+  modules: ['@nuxt/image'],
+
+
+
+  
 })
